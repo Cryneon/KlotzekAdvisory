@@ -1,0 +1,227 @@
+@import "normalize.css";
+
+:root {
+    --color-body: #426FFFFF;
+    --color-accent: #ffc400;
+    --color-main: #1E3476FF;                 
+    --color-heading:  #ffff54;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: inter, sans-serif;
+    color: var(--color-body);
+    font-size: 2.2rem;
+    line-height: 1.4;
+    background-color: var(--color-main);
+    text-shadow: black 1px 1px;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-heading);
+}
+
+h1 {
+    margin: 2rem 0 2rem;
+    font-size: 4rem;
+    line-height: 1.2;
+}
+
+h2 {
+    text-align: center;
+    margin: 2rem 0 1rem;
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--color-heading);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: min(1rem);
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+strong {
+    color: var(--color-accent);
+}
+
+.block {
+    padding: 0 10px 0 10px;
+}
+
+.block--diagonal {
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+}
+
+.block--light {
+    background-color: var(--color-body);
+}
+
+body .block--light {
+    color: var(--color-accent);
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__company {
+    font-size: 3rem;
+}
+
+.hero {
+    margin-bottom: 4rem;
+}
+
+.hero__text {
+    text-align: center;
+}
+
+.info__text {
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.method-circle {
+    margin: auto;
+    width: 355px;
+    height: 355px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.circle {
+    width: 85px;
+    height: 85px;
+    background-color: var(--color-accent);
+    border-radius: 50%;
+    align-content: center;
+}
+
+.circle--side {
+    margin-top: 105px;
+}
+
+.circle__text {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.arrow {
+  --t: 45%;
+  --h: 40%;
+  aspect-ratio: 3/2;
+  width: 30px;
+  height: 20px;
+  background: var(--color-heading);
+  clip-path: polygon(0 calc(50% - var(--t)/2),calc(100% - var(--h)) calc(50% - var(--t)/2),calc(100% - var(--h)) 0,100% 50%,calc(100% - var(--h)) 100%,calc(100% - var(--h)) calc(50% + var(--t)/2),0 calc(50% + var(--t)/2));
+}
+
+.arrow--top {
+    margin: 85px 8px 0px 8px;
+}
+
+.arrow--middle {
+    margin: 0px 85px 0px 85px;
+}
+
+.arrow--bottom {
+    margin: 35px 15px 0px 15px;
+}
+
+#arrow1 {
+    transform: rotate(320deg);
+}
+
+#arrow2 {
+    transform: rotate(40deg);
+}
+
+#arrow3 {
+    transform: rotate(250deg);
+}
+
+#arrow4 {
+    transform: rotate(110deg);
+}
+
+#arrow5 {
+    transform: rotate(180deg);
+}
+
+.footer {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.footer__name {
+    color: var(--color-heading);
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.email {
+    text-decoration: underline;
+}
+
+.list__item {
+    margin-bottom: 2rem;
+    text-decoration: underline;
+}
+
+.contact {
+    margin-bottom: 5rem;
+}
+
+.contact__text {
+    font-size: 1.9rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.contact__footer {
+    text-align: center;
+    color: var(--color-heading);
+    margin-bottom: 50vh;
+}
