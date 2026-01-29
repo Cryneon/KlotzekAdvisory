@@ -1,4 +1,4 @@
-@import "/Styles/normalize.css";
+@import "./normalize.css";
 
 :root {
     --color-body: #426FFFFF;
