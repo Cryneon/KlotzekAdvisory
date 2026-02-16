@@ -1,10 +1,11 @@
 @import "./normalize.css";
 
 :root {
-    --color-body: #426FFFFF;
-    --color-accent: #ffc400;
-    --color-main: #1E3476FF;                 
-    --color-heading:  #ffff54;
+    --color-body: #ebebeb;
+    --color-accent: rgb(255, 222, 131);
+    --color-background: #ff8172;
+    --color-background-alt: #00a8a0;
+    --color-heading:  #000;
 }
 
 *, *::before, *::after {
@@ -20,14 +21,14 @@ body {
     color: var(--color-body);
     font-size: 2.2rem;
     line-height: 1.4;
-    background-color: var(--color-main);
-    text-shadow: black 1px 1px;
+    background-color: var(--color-background);
 }
 
 h1,
 h2,
 h3 {
     color: var(--color-heading);
+    text-shadow: 1px 1px var(--color-accent);
 }
 
 h1 {
@@ -71,11 +72,15 @@ nav {
 }
 
 strong {
-    color: var(--color-accent);
+    color: var(--color-body);
 }
 
 .block {
     padding: 0 10px 0 10px;
+}
+
+.block--border {
+    border-bottom: white solid 5px;
 }
 
 .block--diagonal {
@@ -84,12 +89,19 @@ strong {
     clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
 }
 
-.block--light {
+.block--diagonal--border {
+    padding-bottom: 6px;
+    padding-top: 6px;
+    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
     background-color: var(--color-body);
 }
 
-body .block--light {
-    color: var(--color-accent);
+.block--alt {
+    background-color: var(--color-background-alt);
+}
+
+body .block--alt {
+    color: var(--color-body);
 }
 
 .nav__list {
@@ -132,7 +144,9 @@ body .block--light {
 .circle {
     width: 85px;
     height: 85px;
-    background-color: var(--color-accent);
+    background-color: var(--color-background-alt);
+    padding: 5px;
+    border: var(--color-body) solid 3px;
     border-radius: 50%;
     align-content: center;
 }
@@ -152,7 +166,7 @@ body .block--light {
   aspect-ratio: 3/2;
   width: 30px;
   height: 20px;
-  background: var(--color-heading);
+  background: var(--color-accent);
   clip-path: polygon(0 calc(50% - var(--t)/2),calc(100% - var(--h)) calc(50% - var(--t)/2),calc(100% - var(--h)) 0,100% 50%,calc(100% - var(--h)) 100%,calc(100% - var(--h)) calc(50% + var(--t)/2),0 calc(50% + var(--t)/2));
 }
 
@@ -211,7 +225,7 @@ body .block--light {
 }
 
 .contact {
-    margin-bottom: 5rem;
+    height: 100vh;
 }
 
 .contact__text {
@@ -223,5 +237,5 @@ body .block--light {
 .contact__footer {
     text-align: center;
     color: var(--color-heading);
-    margin-bottom: 50vh;
+    margin-top: 5rem;
 }
