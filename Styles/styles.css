@@ -1,11 +1,11 @@
 @import "./normalize.css";
 
 :root {
-    --color-body: #ebebeb;
+    --color-body: #000;
     --color-accent: rgb(255, 222, 131);
     --color-background: hsl(6,  100%, 69%);
     --color-background-alt: #00a8a0;
-    --color-heading:  #000;
+    --color-heading: #ebebeb;
 }
 
 *, *::before, *::after {
@@ -80,7 +80,7 @@ strong {
 }
 
 .block--border {
-    border-bottom: white solid 5px;
+    border-bottom: var(--color-heading) solid 5px;
 }
 
 .block--diagonal {
@@ -163,9 +163,8 @@ body .block--alt {
     padding: 2px; 
     width:  60px;
     height: 80px;
-    background: var(--color-background-alt); 
-    position: relative;
-    border: #fff solid 3px;
+    background: var(--color-heading);
+    border: var(--color-body) solid 3px;
     border-radius: 10px;
 }
 
@@ -174,21 +173,16 @@ body .block--alt {
     height: 0;
     border-left:  15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 15px solid #fff;
+    border-bottom: 15px solid var(--color-body);
 }
 
 .circle {
-    background-color: var(--color-background-alt);
+    background-color: var(--color-heading);
     border: var(--color-body) solid 3px;
     border-radius: 50%;
     align-content: center;
     padding: 5px;
     text-align: center;
-}
-
-.block--alt .circle,
-.block--alt .text-box {
-    background-color: var(--color-background);
 }
 
 .circle--big {
