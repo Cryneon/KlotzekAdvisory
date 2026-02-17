@@ -3,7 +3,7 @@
 :root {
     --color-body: #ebebeb;
     --color-accent: rgb(255, 222, 131);
-    --color-background: #ff8172;
+    --color-background: hsl(6,  100%, 69%);
     --color-background-alt: #00a8a0;
     --color-heading:  #000;
 }
@@ -85,7 +85,7 @@ strong {
 
 .block--diagonal {
     padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
     clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
 }
 
@@ -131,6 +131,7 @@ body .block--alt {
 
 .method-circle {
     margin: auto;
+    margin-bottom: 2rem;
     width: 355px;
     height: 355px;
 }
@@ -138,36 +139,94 @@ body .block--alt {
 .row {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+}
+
+.grid--text-boxes {
+    grid-template-columns: repeat(5, 55px);
+    justify-items: center;
+    column-gap: 20px;
+}
+
+.progression-indicator {
+    margin-bottom: 1rem;
+}
+
+.text-box {
+    font-size: .85rem;
+    text-align: center;
+    align-content: center;
+    margin-bottom: 2rem;
+    padding: 2px; 
+    width:  60px;
+    height: 80px;
+    background: var(--color-background-alt); 
+    position: relative;
+    border: #fff solid 3px;
+    border-radius: 10px;
+}
+
+.text-box-arrow {
+    width: 0;
+    height: 0;
+    border-left:  15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 15px solid #fff;
 }
 
 .circle {
-    width: 85px;
-    height: 85px;
     background-color: var(--color-background-alt);
-    padding: 5px;
     border: var(--color-body) solid 3px;
     border-radius: 50%;
     align-content: center;
+    padding: 5px;
+    text-align: center;
+}
+
+.block--alt .circle,
+.block--alt .text-box {
+    background-color: var(--color-background);
+}
+
+.circle--big {
+    width: 85px;
+    height: 85px;
+}
+
+.circle--small {
+    width: 35px;
+    height: 35px;
 }
 
 .circle--side {
     margin-top: 105px;
 }
 
-.circle__text {
-    text-align: center;
+.circle--big p {
     font-size: 1.2rem;
 }
 
+.circle--small p {
+    font-size: 1.5rem;
+}
+
 .arrow {
-  --t: 45%;
-  --h: 40%;
-  aspect-ratio: 3/2;
-  width: 30px;
-  height: 20px;
-  background: var(--color-accent);
-  clip-path: polygon(0 calc(50% - var(--t)/2),calc(100% - var(--h)) calc(50% - var(--t)/2),calc(100% - var(--h)) 0,100% 50%,calc(100% - var(--h)) 100%,calc(100% - var(--h)) calc(50% + var(--t)/2),0 calc(50% + var(--t)/2));
+    --t: 45%;
+    --h: 40%;
+    aspect-ratio: 3/2;
+    width: 30px;
+    height: 20px;
+    background: var(--color-accent);
+    clip-path: polygon(0 calc(50% - var(--t)/2),calc(100% - var(--h)) calc(50% - var(--t)/2),calc(100% - var(--h)) 0,100% 50%,calc(100% - var(--h)) 100%,calc(100% - var(--h)) calc(50% + var(--t)/2),0 calc(50% + var(--t)/2));
+}
+
+.arrow--straight {
+    align-self: center;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
 .arrow--top {
@@ -175,7 +234,7 @@ body .block--alt {
 }
 
 .arrow--middle {
-    margin: 0px 85px 0px 85px;
+    margin: 20px 85px 20px 85px;
 }
 
 .arrow--bottom {
