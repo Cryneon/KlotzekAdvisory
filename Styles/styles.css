@@ -28,7 +28,7 @@ h1,
 h2,
 h3 {
     color: var(--color-heading);
-    text-shadow: 1px 1px var(--color-accent);
+    text-shadow: 1px 1px var(--color-body);
 }
 
 h1 {
@@ -84,15 +84,15 @@ strong {
 }
 
 .block--diagonal {
-    padding-bottom: 3rem;
-    padding-top: 2rem;
-    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+    padding-bottom: 20px;
+    padding-top: 20px;
+    clip-path: polygon(0% 20px, 100% 0%, 100% calc(100% - 20px), 0% 100%);
 }
 
 .block--diagonal--border {
     padding-bottom: 6px;
     padding-top: 6px;
-    clip-path: polygon(0% 5%, 100% 0%, 100% 95%, 0% 100%);
+    clip-path: polygon(0% 20px, 100% 0%, 100% calc(100% - 20px), 0% 100%);
     background-color: var(--color-body);
 }
 
@@ -145,10 +145,14 @@ body .block--alt {
     display: grid;
 }
 
-.grid--text-boxes {
+.grid2x5 {
     grid-template-columns: repeat(5, 55px);
     justify-items: center;
     column-gap: 20px;
+}
+
+.grid5x1 {
+    row-gap: 2rem;
 }
 
 .progression-indicator {
@@ -157,8 +161,8 @@ body .block--alt {
 
 .text-box {
     font-size: .85rem;
-    text-align: center;
     align-content: center;
+    text-align: center;
     margin-bottom: 2rem;
     padding: 2px; 
     width:  60px;
@@ -180,18 +184,26 @@ body .block--alt {
     background-color: var(--color-heading);
     border: var(--color-body) solid 3px;
     border-radius: 50%;
-    align-content: center;
     padding: 5px;
+    align-content: center;
     text-align: center;
 }
 
-.circle--big {
+.circle--large {
     width: 85px;
+    min-width: 85px;
     height: 85px;
+}
+
+.circle--medium {
+    width: 50px;
+    min-width: 50px;
+    height: 50px;
 }
 
 .circle--small {
     width: 35px;
+    max-width: 35px;
     height: 35px;
 }
 
@@ -199,7 +211,7 @@ body .block--alt {
     margin-top: 105px;
 }
 
-.circle--big p {
+.circle--large p {
     font-size: 1.2rem;
 }
 
@@ -253,6 +265,17 @@ body .block--alt {
 
 #arrow5 {
     transform: rotate(180deg);
+}
+
+.media {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+.icon {
+    width: 100%;
+    fill: var(--color-heading);
 }
 
 .footer {
