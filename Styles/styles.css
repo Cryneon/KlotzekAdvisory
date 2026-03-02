@@ -3,7 +3,7 @@
 :root {
     --color-body: #000;
     --color-accent: rgb(255, 222, 131);
-    --color-background: #ff575f;
+    --color-background: #e96268;
     --color-background-alt: #00a8a0;
     --color-heading: #ebebeb;
 }
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    font-family: inter, sans-serif;
+    font-family: "Gelasio", serif;
     color: var(--color-body);
     font-size: 2.2rem;
     line-height: 1.4;
@@ -32,15 +32,18 @@ h3 {
 }
 
 h1 {
+    
     margin: 2rem 0 2rem;
-    font-size: 4rem;
+    font-size: 5rem;
     line-height: 1.2;
+    align-self: center;
 }
 
 h2 {
     text-align: center;
     margin: 2rem 0 1rem;
     font-size: 3rem;
+    font-style: italic;
 }
 
 h3 {
@@ -115,15 +118,23 @@ body .block--alt {
 }
 
 .nav__list {
-    list-style: none;
     display: flex;
-    gap: 1rem;
+    gap: 3rem;
     padding: 0;
     margin: 0;
 }
 
+.nav__list li:first-child {
+    list-style: none;
+}
+
 .nav__company {
     font-size: 3rem;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
 }
 
 .hero__text {
@@ -329,7 +340,7 @@ body .block--alt {
 
 @media screen and (min-width: 768px) {
     h1 {
-        font-size: 6rem;
+        font-size: 8rem;
     }
 
     h2 {
@@ -391,7 +402,7 @@ body .block--alt {
     }
 
     .text-box--stretched {
-        font-size: 2.2rem;
+        font-size: 3rem;
     }
     
     .arrow {
@@ -417,14 +428,14 @@ body .block--alt {
     }
 
     .rhombus {
-        height: 450px;
-        width: 450px;
+        height: 600px;
+        width: 600px;
     }
 
     .grid2x2 {
-        height: 450px;
-        width: 450px;
-        padding: 4rem;
+        height: 600px;
+        width: 600px;
+        padding: 5rem;
     }
 
     .footer {
@@ -433,5 +444,53 @@ body .block--alt {
 
     .footer__name {
         font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .circle--small {
+        width: 71px;
+        max-width: 71px;
+        height: 71px;
+        font-size: 3.5rem;
+    }
+    
+    .grid2x5 {
+        grid-template-columns: repeat(5, 220px);
+    }
+
+    .text-box--small {
+        font-size: 2.2rem;
+        width: 200px;
+        height: 200px;
+    }
+
+    .circle--large {
+        width: 150px;
+        min-width: 150px;
+        height: 150px;
+        font-size: 2rem;
+        padding: 15px;
+    }
+
+    .circle--side {
+        margin-top: 195px;
+    }
+
+    .arrow--straight {
+        margin-left: 62px;
+        margin-right: 62px;
+    }
+
+    .arrow--top {
+        margin: 150px 8px 0px 8px;
+    }
+
+    .arrow--middle {
+        margin: 30px 150px 30px 150px;
+    }
+
+    .arrow--bottom {
+        margin: 70px 20px 0px 20px;
     }
 }
