@@ -329,8 +329,10 @@ body .block--alt {
 
 .contact__image {
     width: 355px;
+    height: 473px;
     justify-self: center;
     border-radius: 10px;
+    overflow: hidden;
 }
 
 .contact__footer {
