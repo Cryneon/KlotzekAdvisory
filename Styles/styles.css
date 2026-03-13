@@ -137,13 +137,8 @@ body .block--alt {
     flex-direction: column;
 }
 
-.hero__text {
+.section__text {
     text-align: center;
-}
-
-.info__text {
-    margin-left: 1rem;
-    margin-bottom: 2rem;
 }
 
 .row {
@@ -323,7 +318,7 @@ body .block--alt {
 }
 
 .contact {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .contact__text {
@@ -332,10 +327,16 @@ body .block--alt {
     margin-bottom: 1rem;
 }
 
+.contact__image {
+    width: 355px;
+    justify-self: center;
+    border-radius: 10px;
+}
+
 .contact__footer {
     text-align: center;
     color: var(--color-heading);
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
