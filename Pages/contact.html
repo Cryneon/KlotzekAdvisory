@@ -27,6 +27,13 @@
       <div class="container">
         <h2>Ready to transform your Post-Sales Customer Operations?</h2>
         <article class="grid grid5x1">
+          <picture class="contact__image">
+            <source
+              type="image/webp"
+              srcset="/Images/portrait.webp 1x, /Images/portrait@2x.webp 2x"
+            />
+            <img src="/Images/portrait.jpg" alt="A portrait of Markus" />
+          </picture>
           <div>
             <h3>Let's build a Support model that scales with your growth!</h3>
             <p class="contact__text">Connect with: Markus Klotzek</p>
@@ -37,14 +44,24 @@
                 >Info@KlotzekAdvisory.com</a
               >
             </p>
+            <h3>Get in Touch</h3>
+            <form name="contact" method="POST" netlify>
+              <p>
+                <label>Your Name: <input type="text" name="name" /></label>
+              </p>
+              <p>
+                <label>Your Email: <input type="email" name="email" /></label>
+              </p>
+              <p>
+                <label
+                  >Your Message: <textarea name="message"></textarea>
+                </label>
+              </p>
+              <p>
+                <button type="submit">Send Message</button>
+              </p>
+            </form>
           </div>
-          <picture class="contact__image">
-            <source
-              type="image/webp"
-              srcset="/Images/portrait.webp 1x, /Images/portrait@2x.webp 2x"
-            />
-            <img src="/Images/portrait.jpg" alt="A portrait of Markus" />
-          </picture>
         </article>
         <footer class="contact__footer">
           <p>Connect with us for a free 30-minute consultation!</p>
