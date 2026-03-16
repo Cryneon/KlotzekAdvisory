@@ -82,6 +82,46 @@ strong {
     color: var(--color-body);
 }
 
+input, textarea, button {
+    display: block;
+    background-color: var(--color-heading);
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    border: 0;
+    padding: 5px 1rem;
+    width: 323px;
+    transition: box-shadow .2s;
+}
+
+input, textarea {
+    margin-left: 2rem;
+    border-radius: 10px;
+    outline: 0;
+}
+
+textarea {
+    height: 100px;
+    max-width: 323px;
+    min-height: 38px;
+}
+
+button {
+    cursor: pointer;
+    max-width: 364px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 5px 2rem;
+}
+
+input:hover,
+input:focus,
+textarea:hover,
+textarea:focus,
+button:hover,
+button:focus {
+    box-shadow: var(--color-body) 0px 0px 0px 2px;
+}
+
 .container {
     max-width: 1200px;
     margin: auto;
